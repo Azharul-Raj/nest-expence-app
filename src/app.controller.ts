@@ -1,6 +1,7 @@
 import { Controller,Delete,Get, Param, Post, Put,Body } from "@nestjs/common";
 import { data,Report } from "data";
 import { AppService } from "./app.service";
+import { CreateReportDto } from "./dtos/report.dtos";
 
 @Controller("api/v1/:type")
 export class AppController{
@@ -24,7 +25,7 @@ export class AppController{
 
   @Post()
   createReport(
-    @Body() body:Report
+    @Body() body:CreateReportDto
   ){
     console.log(body)
     data.report.push(body)

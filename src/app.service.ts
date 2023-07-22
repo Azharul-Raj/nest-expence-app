@@ -12,7 +12,7 @@ export class AppService {
     if(!typeArr.includes(type)){
       return {
         data:null,
-        message:`no data found in this ${type} type`
+        message:`no data found in this ${type}`
       }
     }
     else if(type){
